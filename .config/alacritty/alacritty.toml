@@ -1,0 +1,47 @@
+[font]
+size = 12.0
+
+[font.normal]
+family = "Overpass Mono"
+style = "Regular"
+
+[font.bold]
+family = "Overpass Mono"
+style = "Bold"
+
+[font.italic]
+family = "Overpass Mono"
+style = "Italic"
+
+[font.bold_italic]
+family = "Overpass Mono"
+style = "Bold Italic"
+
+[colors.primary]
+background = '#000000'
+foreground = '#ffffff'
+
+[colors.cursor]
+text = '#000000'
+cursor = '#ffffff'
+
+[colors.normal]
+black   = '#888888'
+red     = '#ff0000'
+green   = '#00ff00'
+yellow  = '#ffff00'
+blue    = '#0088ff'
+magenta = '#ff00ff'
+cyan    = '#00ffff'
+white   = '#aaaaaa' 
+
+[colors.bright]
+black   = '#888888'
+red     = '#ff8888'
+green   = '#88ff88'
+yellow  = '#ffff88'
+blue    = '#55aaff'
+magenta = '#ff88ff'
+cyan    = '#88ffff'
+white   = '#ffffff' 
+  
