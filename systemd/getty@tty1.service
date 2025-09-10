@@ -10,7 +10,6 @@ After=seatd.service
 Wants=systemd-logind.service 
 After=systemd-logind.service
 
-ConditionPathExists=/home/zac 
 OnFailure=emergency.target
 
 [Service] 
