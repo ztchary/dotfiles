@@ -10,8 +10,6 @@
 
 (defpoll ipprv :interval "5s" "ip -4 addr show wlan0 | awk '/inet/ {print $2}' | cut -d'/' -f1")
 
-(defpoll ippub :interval "5s" "pubip")
-
 (defpoll pid :interval "1s" "echo $$")
 
 (defpoll time :interval "1s" "date +'%m-%d-%y %H:%M:%S'")
@@ -32,7 +30,7 @@
 
 (defwidget network_widget []
 	(box :class "widget ${ssid == '' ? 'gray' : 'blue'}"
-		(label :text " wlan: ${ssid == '' ? 'disconnected' : '${ssid} (${ipprv}, ${ippub})'}")))
+		(label :text " wlan: ${ssid == '' ? 'disconnected' : '${ssid} (${ipprv})'}")))
 
 (defwidget battery_widget []
 	(box :class "widget ${EWW_BATTERY.BAT0.status == 'Charging' ? 'white' : EWW_BATTERY.BAT0.capacity > 30 ? 'green' : EWW_BATTERY.BAT0.capacity > 20 ? 'yellow' : EWW_BATTERY.BAT0.capacity > 10 ? 'orange' : EWW_TIME%2 == 0 ? 'red' : 'white'}"
