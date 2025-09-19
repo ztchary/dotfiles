@@ -5,19 +5,19 @@ opacity = 0.0
 size = 12.0
 
 [font.normal]
-family = "Maple Mono NF"
+family = "Hack"
 style = "Regular"
 
 [font.bold]
-family = "Maple Mono NF"
+family = "Hack"
 style = "Bold"
 
 [font.italic]
-family = "Maple Mono NF"
+family = "Hack"
 style = "Italic"
 
 [font.bold_italic]
-family = "Maple Mono NF"
+family = "Hack"
 style = "Bold Italic"
 
 [colors.primary]

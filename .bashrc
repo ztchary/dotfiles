@@ -20,5 +20,7 @@ alias ll='ls -l'
 alias grep='grep --color=auto'
 alias vi='vim'
 
+source .secret_aliases
+
 PS1='\033[96m\u\033[0m@\033[96m\h \033[95m\w\033[0m $(PS1errcode)\n\$ '
 
