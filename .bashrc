@@ -3,6 +3,7 @@
 [[ $- != *i* ]] && return
 
 set -o vi
+shopt -s autocd cdspell
 
 export GTK_THEME="Adwaita:dark"
 export ADW_DISABLE_PORTAL=1
