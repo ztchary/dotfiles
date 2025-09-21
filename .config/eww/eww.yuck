@@ -1,10 +1,10 @@
-(defpoll temp :interval "1s" "echo $(($(cat /sys/class/hwmon/hwmon3/temp1_input)/1000))")
+(defpoll temp :interval "5s" "echo $(($(cat /sys/class/hwmon/hwmon3/temp1_input)/1000))")
 
-(defpoll vol :interval "1s" "wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2*100}'")
+(defpoll vol :interval "5s" "wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2*100}'")
 
-(defpoll mute :interval "1s" "if wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q MUTED; then echo 'gray'; else echo 'magenta'; fi")
+(defpoll mute :interval "5s" "if wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q MUTED; then echo 'gray'; else echo 'magenta'; fi")
 
-(defpoll brightness :interval "1s" "brightnessctl info | grep C | cut -d' ' -f4 | cut -c 2- | rev | cut -c 3- | rev")
+(defpoll brightness :interval "5s" "brightnessctl info | grep C | cut -d' ' -f4 | cut -c 2- | rev | cut -c 3- | rev")
 
 (defpoll ssid :interval "5s" "iwctl station wlan0 show | grep 'Connected network' | cut -c 35- | xargs")
 
