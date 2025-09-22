@@ -1,9 +1,10 @@
 # ~/.bashrc
 
-[[ $- != *i* ]] && return
-
 set -o vi
 shopt -s autocd cdspell
+shopt -s histappend
+shopt -s checkwinsize
+shopt -s globstar
 
 export GTK_THEME="Adwaita:dark"
 export ADW_DISABLE_PORTAL=1
@@ -20,9 +21,7 @@ alias la='ls -la'
 alias grep='grep --color=auto'
 alias vi='vim'
 
-if [ -f .secret_aliases ]; then
-	source .secret_aliases
-fi
+. .secret_aliases
 
 PS1='\e[96m\h\e[95m\w$(PS1errcode)\e[m\n\$ '
 
