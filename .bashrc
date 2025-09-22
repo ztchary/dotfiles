@@ -17,7 +17,7 @@ PS1errcode () {
 }
 
 alias ls='ls --color=auto'
-alias la='ls -la'
+alias la='ls -lA'
 alias grep='grep --color=auto'
 alias vi='vim'
 
