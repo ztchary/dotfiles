@@ -1,7 +1,5 @@
-# ~/.bashrc
-
 set -o vi
-shopt -s autocd cdspell
+shopt -s cdspell autocd
 shopt -s histappend
 shopt -s checkwinsize
 shopt -s globstar
@@ -9,19 +7,20 @@ shopt -s globstar
 export GTK_THEME="Adwaita:dark"
 export ADW_DISABLE_PORTAL=1
 
-PS1errcode () {
+PS1errcode() {
 	local ecode=$?
 	if [ $ecode -ne 0 ]; then
-		echo -e " \e[31mfailed ($ecode)"
+		echo -e " \e[92m$ecode"
 	fi
 }
 
-alias ls='ls --color=auto'
-alias la='ls -lA'
-alias grep='grep --color=auto'
-alias vi='vim'
+PS1='\e[96m\h\e[95m$PWD$(PS1errcode)\e[m\n$ '
 
-. .secret_aliases
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export EDITOR='vim'
+export VISUAL='vim'
+export TERM='xterm-256color'
+export COLORTERM='truecolor'
 
-PS1='\e[96m\h\e[95m\w$(PS1errcode)\e[m\n\$ '
+. ~/.bash_aliases
 
