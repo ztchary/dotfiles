@@ -12,7 +12,7 @@
 
 (defpoll pid :interval "1s" "echo $$")
 
-(defpoll time :interval "1s" "date +'%m-%d-%y %H:%M:%S'")
+(defpoll time :interval "1s" "date +'%m-%d-%y %I:%M:%S'")
 
 (defpoll user :interval "60s" "echo $USER@$HOSTNAME")
 
@@ -21,8 +21,8 @@
 		(label :text " date: ${time}")))
 
 (defwidget storage_widget []
-	(box :class "widget ${EWW_DISK['/'].free < 10000000000 ? 'red' : 'green'}"
-		(label :text " disk: ${round(EWW_DISK['/'].used/1000000000,1)}GB / ${round(EWW_DISK['/'].total/1000000000,1)}GB")))
+	(box :class "widget ${EWW_DISK['/'].free < 1073741824 ? 'red' : 'green'}"
+		(label :text " disk: ${round(EWW_DISK['/'].used/1073741824,1)}GiB / ${round(EWW_DISK['/'].total/1073741824,1)}GiB")))
 
 (defwidget volume_widget []
 	(box :class "widget ${mute}"
@@ -49,8 +49,8 @@
 		(label :text " cpu: ${round(EWW_CPU.avg,0)}%")))
 
 (defwidget ram_widget []
-	(box :class "widget ${EWW_RAM.total_mem - EWW_RAM.used_mem < 1000000000 ? 'red' : 'green'}"
-		(label :text " mem: ${round(EWW_RAM.used_mem/1000000000,1)}GB / ${round(EWW_RAM.total_mem/1000000000,1)}GB")))
+	(box :class "widget ${EWW_RAM.total_mem - EWW_RAM.used_mem < 1073741824 ? 'red' : 'green'}"
+		(label :text " mem: ${round(EWW_RAM.used_mem/1073741824,1)}GiB / ${round(EWW_RAM.total_mem/1073741824,1)}GiB")))
 
 (defwidget temp_widget []
 	(box :class "widget ${temp < 80 ? 'green' : temp < 90 ? 'yellow' : 'red'}"

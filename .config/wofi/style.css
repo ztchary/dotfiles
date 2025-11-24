@@ -20,6 +20,7 @@
     background: rgba(0,0,0,0);
     border: 1px solid #88ffff;
     padding: 8px 12px;
+	color: #eee;
 }
 
 #input:focus {

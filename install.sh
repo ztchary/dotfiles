@@ -3,6 +3,8 @@
 root=$(realpath $(dirname $0))
 cd $root
 
+sudo pacman -Sy hyprland hyprpaper alacritty eww wofi btop vim 
+
 mkdir -p ~/.config
 ln -s $root/.config/hypr ~/.config/hypr
 ln -s $root/.config/alacritty ~/.config/alacritty
