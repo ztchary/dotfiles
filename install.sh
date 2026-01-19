@@ -3,17 +3,15 @@
 root=$(realpath $(dirname $0))
 cd $root
 
-sudo pacman -Sy hyprland hyprpaper alacritty eww wofi btop vim 
-
-mkdir -p ~/.config
-ln -s $root/.config/hypr ~/.config/hypr
-ln -s $root/.config/alacritty ~/.config/alacritty
-ln -s $root/.config/eww ~/.config/eww
-ln -s $root/.config/wofi ~/.config/wofi
-ln -s $root/.config/btop ~/.config/btop
-ln -s $root/.config/nvim ~/.config/nvim
-ln -s $root/.bashrc ~/.bashrc
-ln -s $root/.bash_profile ~/.bash_profile
-ln -s $root/.vimrc ~/.vimrc
+mkdir -p ~/.config/nvim
+ln -s $root/.config/hypr          ~/.config
+ln -s $root/.config/alacritty     ~/.config
+ln -s $root/.config/waybar        ~/.config
+ln -s $root/.config/wofi          ~/.config
+ln -s $root/.config/btop          ~/.config
+ln -s $root/.config/nvim/init.lua ~/.config/nvim
+ln -s $root/.bashrc		          ~
+ln -s $root/.bash_profile         ~
+ln -s $root/.bash_aliases         ~
 sudo ln -s $root/systemd/getty@tty1.service /etc/systemd/system/getty@tty1.service
 

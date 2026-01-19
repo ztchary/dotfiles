@@ -1,0 +1,89 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "height": 16,
+    "modules-right": [
+        "cpu",
+        "temperature",
+        "disk",
+        "memory",
+        "custom/pid",
+        "custom/user",
+        "network",
+        "clock",
+        "pulseaudio",
+        "backlight"
+    ],
+
+    "cpu": {
+        "interval": 1,
+        "format": "cpu: {usage}%",
+        "states": {
+            "warning": 70,
+            "critical": 85
+        }
+    },
+
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp2_input",
+        "critical-threshold": 90,
+        "interval": 1,
+        "format": "temp: {temperatureC}.0°C / 100.0°C",
+        "format-critical": "temp: {temperatureC}.0°C / 100.0°C"
+    },
+
+    "disk": {
+        "interval": 30,
+        "path": "/",
+        "format": "disk: {used}GB / {total}GB",
+        "unit": "GB",
+        "states": {
+            "critical": 90
+        }
+    },
+
+    "memory": {
+        "interval": 1,
+        "format": "mem: {used:0.1f}GB / {total:0.1f}GB",
+        "states": {
+            "critical": 90
+        }
+    },
+
+    "custom/pid": {
+        "exec": "echo $$",
+        "interval": 1,
+        "format": "pid: {}"
+    },
+
+    "custom/user": {
+        "exec": "echo $USER@$HOSTNAME",
+        "interval": 60,
+        "format": "user: {}"
+    },
+
+    "network": {
+        "interface": "wlan0",
+        "format-ethernet": "wlan: {ipaddr}",
+        "format-disconnected": "wlan: disconnected",
+        "interval": 5
+    },
+
+    "clock": {
+        "interval": 1,
+        "format": "date: {:%m-%d-%y %H:%M:%S}"
+    },
+
+    "pulseaudio": {
+        "format": "vol: {volume}",
+        "format-muted": "vol: {volume}",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "interval": 1
+    },
+
+	"backlight": {
+		"device": "backlight",
+		"format": "bl: {percent}",
+		"interval": 1
+	}
+}
