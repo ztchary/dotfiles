@@ -11,6 +11,7 @@ ln -s $root/.config/alacritty ~/.config/alacritty
 ln -s $root/.config/eww ~/.config/eww
 ln -s $root/.config/wofi ~/.config/wofi
 ln -s $root/.config/btop ~/.config/btop
+ln -s $root/.config/nvim ~/.config/nvim
 ln -s $root/.bashrc ~/.bashrc
 ln -s $root/.bash_profile ~/.bash_profile
 ln -s $root/.vimrc ~/.vimrc
