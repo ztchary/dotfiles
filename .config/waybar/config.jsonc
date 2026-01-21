@@ -3,6 +3,7 @@
     "position": "bottom",
     "height": 16,
     "modules-right": [
+		"battery",
         "cpu",
         "temperature",
         "disk",
@@ -14,6 +15,15 @@
         "pulseaudio",
         "backlight"
     ],
+
+	"battery": {
+		"interval": 1,
+		"format": "bat: {capacity}",
+        "states": {
+            "warning": 70,
+            "critical": 85
+        }
+	},
 
     "cpu": {
         "interval": 1,

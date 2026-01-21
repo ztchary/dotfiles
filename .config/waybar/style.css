@@ -11,24 +11,24 @@ window#waybar {
     color: #e0e0e0;
 }
 
-#cpu, #temperature, #disk, #memory, #custom-pid, 
+#battery, #cpu, #temperature, #disk, #memory, #custom-pid,
 #custom-user, #network, #clock, #pulseaudio, #backlight {
     padding: 0 10px;
     border-left: 4px solid;
     margin-top: 2px;
 }
 
-#cpu.critical, #temperature.critical, #disk.critical, #memory.critical {
+#battery.critical, #cpu.critical, #temperature.critical, #disk.critical, #memory.critical {
     color: #ff4444;
     border-color: #882222;
 }
 
-#cpu.warning, #temperature.warning {
+#battery.warning, #cpu.warning, #temperature.warning {
     color: #ffff44;
     border-color: #888822;
 }
 
-#cpu, #temperature, #disk, #memory {
+#battery, #cpu, #temperature, #disk, #memory {
     color: #44ff44;
     border-color: #228822;
 }
