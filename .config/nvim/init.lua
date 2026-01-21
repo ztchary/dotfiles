@@ -39,6 +39,7 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
+vim.opt.mouse = ""
 
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
