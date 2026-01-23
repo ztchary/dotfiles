@@ -20,8 +20,8 @@
 		"interval": 1,
 		"format": "bat: {capacity}",
         "states": {
-            "warning": 70,
-            "critical": 85
+            "warning": 30,
+            "critical": 15
         }
 	},
 
