@@ -1,24 +1,23 @@
 {
     "layer": "top",
     "position": "bottom",
-    "height": 16,
+    "height": 27,
     "modules-right": [
 		"battery",
         "cpu",
         "temperature",
         "disk",
         "memory",
-        "custom/pid",
-        "custom/user",
         "network",
-        "clock",
+        "clock#date",
+        "clock#time",
         "pulseaudio",
         "backlight"
     ],
 
 	"battery": {
 		"interval": 1,
-		"format": "bat: {capacity}",
+		"format": "<span color='#eee'>bat:</span>{capacity:02d}",
         "states": {
             "warning": 30,
             "critical": 15
@@ -27,7 +26,7 @@
 
     "cpu": {
         "interval": 1,
-        "format": "cpu: {usage}%",
+        "format": "<span color='#eee'>cpu:</span>{usage:02d}",
         "states": {
             "warning": 70,
             "critical": 85
@@ -38,14 +37,13 @@
         "hwmon-path": "/sys/class/hwmon/hwmon2/temp2_input",
         "critical-threshold": 90,
         "interval": 1,
-        "format": "temp: {temperatureC}.0°C / 100.0°C",
-        "format-critical": "temp: {temperatureC}.0°C / 100.0°C"
+        "format": "<span color='#eee'>temp:</span>{temperatureC:02d}"
     },
 
     "disk": {
         "interval": 30,
         "path": "/",
-        "format": "disk: {used}GB / {total}GB",
+        "format": "<span color='#eee'>disk:</span>{percentage_used:02d}",
         "unit": "GB",
         "states": {
             "critical": 90
@@ -54,46 +52,40 @@
 
     "memory": {
         "interval": 1,
-        "format": "mem: {used:0.1f}GB / {total:0.1f}GB",
+        "format": "<span color='#eee'>mem:</span>{percentage:02d}",
         "states": {
             "critical": 90
         }
     },
 
-    "custom/pid": {
-        "exec": "echo $$",
-        "interval": 1,
-        "format": "pid: {}"
-    },
-
-    "custom/user": {
-        "exec": "echo $USER@$HOSTNAME",
-        "interval": 60,
-        "format": "user: {}"
-    },
-
     "network": {
         "interface": "wlan0",
-        "format-ethernet": "wlan: {ipaddr}",
-        "format-disconnected": "wlan: disconnected",
+        "format": "<span color='#eee'>wlan:</span>{signalStrength:02d}",
+        "format-disconnected": "<span color='#eee'>wlan:</span><span color='#888'>0</span>",
         "interval": 5
     },
 
-    "clock": {
+    "clock#date": {
         "interval": 1,
-        "format": "date: {:%m-%d-%y %H:%M:%S}"
+        "format": "<span color='#eee'>date:</span>{:%m-%d-%y}"
+    },
+
+    "clock#time": {
+        "interval": 1,
+        "format": "<span color='#eee'>time:</span>{:%H:%M:%S}"
     },
 
     "pulseaudio": {
-        "format": "vol: {volume}",
-        "format-muted": "vol: {volume}",
+        "format": "<span color='#eee'>vol:</span>{volume:02d}",
+        "format-muted": "<span color='#eee'>vol:</span>{volume:02d}",
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "interval": 1
     },
 
 	"backlight": {
 		"device": "backlight",
-		"format": "bl: {percent}",
+		"format": "<span color='#eee'>bl:</span>{percent:02d}",
 		"interval": 1
 	}
 }
+
