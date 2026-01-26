@@ -4,9 +4,6 @@ shopt -s histappend
 shopt -s checkwinsize
 shopt -s globstar
 
-export GTK_THEME="Adwaita:dark"
-export ADW_DISABLE_PORTAL=1
-
 PS1errcode() {
 	local ecode=$?
 	if [ $ecode -ne 0 ]; then
@@ -24,6 +21,12 @@ export COLORTERM='truecolor'
 
 alias vim='nvim'
 alias vi='nvim'
-
-. ~/.bash_aliases
+alias ls='ls --color=auto'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias zgrep='zgrep --color=auto'
+alias la='ls -lAh'
 

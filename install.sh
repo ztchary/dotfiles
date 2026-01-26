@@ -10,8 +10,7 @@ ln -s $root/.config/waybar        ~/.config
 ln -s $root/.config/wofi          ~/.config
 ln -s $root/.config/btop          ~/.config
 ln -s $root/.config/nvim/init.lua ~/.config/nvim
-ln -s $root/.bashrc		          ~
+ln -s $root/.bashrc               ~
 ln -s $root/.bash_profile         ~
-ln -s $root/.bash_aliases         ~
 sudo ln -s $root/systemd/getty@tty1.service /etc/systemd/system/getty@tty1.service
 
