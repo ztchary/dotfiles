@@ -1,91 +1,98 @@
 {
-    "layer": "top",
-    "position": "bottom",
-    "height": 27,
-    "modules-right": [
+	"layer": "top",
+	"position": "bottom",
+	"height": 27,
+	"modules-left": [
 		"battery",
-        "cpu",
-        "temperature",
-        "disk",
-        "memory",
-        "network",
-        "clock#date",
-        "clock#time",
-        "pulseaudio",
-        "backlight"
-    ],
+		"cpu",
+		"temperature",
+		"disk",
+		"memory"
+	],
+	"modules-center": [
+		"hyprland/window"
+	],
+	"modules-right": [
+		"network",
+		"pulseaudio",
+		"backlight",
+		"clock#date",
+		"clock#time"
+	],
 
 	"battery": {
 		"interval": 1,
 		"format": "<span color='#eee'>bat:</span>{capacity:02d}",
-        "states": {
-            "warning": 30,
-            "critical": 15
-        }
+		"states": {
+			"warning": 30,
+			"critical": 15
+		}
 	},
 
-    "cpu": {
-        "interval": 1,
-        "format": "<span color='#eee'>cpu:</span>{usage:02d}",
-        "states": {
-            "warning": 70,
-            "critical": 85
-        }
-    },
+	"cpu": {
+		"interval": 1,
+		"format": "<span color='#eee'>cpu:</span>{usage:02d}",
+		"states": {
+			"warning": 70,
+			"critical": 85
+		}
+	},
 
-    "temperature": {
-        "hwmon-path": "/sys/class/hwmon/hwmon2/temp2_input",
-        "critical-threshold": 90,
-        "interval": 1,
-        "format": "<span color='#eee'>temp:</span>{temperatureC:02d}"
-    },
+	"temperature": {
+		"hwmon-path": "/sys/class/hwmon/hwmon2/temp2_input",
+		"critical-threshold": 90,
+		"interval": 1,
+		"format": "<span color='#eee'>temp:</span>{temperatureC:02d}"
+	},
 
-    "disk": {
-        "interval": 30,
-        "path": "/",
-        "format": "<span color='#eee'>disk:</span>{percentage_used:02d}",
-        "unit": "GB",
-        "states": {
-            "critical": 90
-        }
-    },
+	"disk": {
+		"interval": 30,
+		"path": "/",
+		"format": "<span color='#eee'>disk:</span>{percentage_used:02d}",
+		"unit": "GB",
+		"states": {
+			"warning": 70,
+			"critical": 85
+		}
+	},
 
-    "memory": {
-        "interval": 1,
-        "format": "<span color='#eee'>mem:</span>{percentage:02d}",
-        "states": {
-            "critical": 90
-        }
-    },
+	"memory": {
+		"interval": 1,
+		"format": "<span color='#eee'>mem:</span>{percentage:02d}",
+		"states": {
+			"warning": 70,
+			"critical": 85
+		}
+	},
 
-    "network": {
-        "interface": "wlan0",
-        "format": "<span color='#eee'>wlan:</span>{signalStrength:02d}",
-        "format-disconnected": "<span color='#eee'>wlan:</span><span color='#888'>0</span>",
-        "interval": 5
-    },
+	"network": {
+		"interface": "wlan0",
+		"format": "<span color='#eee'>wlan:</span>{signalStrength:02d}",
+		"format-disconnected": "<span color='#eee'>wlan:</span>0",
+		"interval": 5
+	},
 
-    "clock#date": {
-        "interval": 1,
-        "format": "<span color='#eee'>date:</span>{:%m-%d-%y}"
-    },
-
-    "clock#time": {
-        "interval": 1,
-        "format": "<span color='#eee'>time:</span>{:%H:%M:%S}"
-    },
-
-    "pulseaudio": {
-        "format": "<span color='#eee'>vol:</span>{volume:02d}",
-        "format-muted": "<span color='#eee'>vol:</span>{volume:02d}",
-        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-        "interval": 1
-    },
+	"pulseaudio": {
+		"format": "<span color='#eee'>vol:</span>{volume:02d}",
+		"format-muted": "<span color='#eee'>vol:</span>{volume:02d}",
+		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+		"interval": 1
+	},
 
 	"backlight": {
 		"device": "backlight",
 		"format": "<span color='#eee'>bl:</span>{percent:02d}",
 		"interval": 1
+	},
+
+	"clock#date": {
+		"interval": 1,
+		"format": "<span color='#eee'>date:</span>{:%m-%d-%y}"
+	},
+
+	"clock#time": {
+		"interval": 1,
+		"format": "<span color='#eee'>time:</span>{:%H:%M:%S}"
 	}
 }
 
