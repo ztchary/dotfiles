@@ -1,7 +1,7 @@
 {
 	"layer": "top",
 	"position": "bottom",
-	"height": 27,
+	"height": 21,
 	"modules-left": [
 		"battery",
 		"cpu",
@@ -10,6 +10,7 @@
 		"memory"
 	],
 	"modules-center": [
+		"mpris",
 		"hyprland/window"
 	],
 	"modules-right": [
@@ -22,7 +23,7 @@
 
 	"battery": {
 		"interval": 1,
-		"format": "<span color='#eee'>bat:</span>{capacity:02d}",
+		"format": "<span color='#fff'>bat:</span>{capacity:02d}",
 		"states": {
 			"warning": 30,
 			"critical": 15
@@ -31,7 +32,7 @@
 
 	"cpu": {
 		"interval": 1,
-		"format": "<span color='#eee'>cpu:</span>{usage:02d}",
+		"format": "<span color='#fff'>cpu:</span>{usage:02d}",
 		"states": {
 			"warning": 70,
 			"critical": 85
@@ -42,13 +43,13 @@
 		"hwmon-path": "/sys/class/hwmon/hwmon2/temp2_input",
 		"critical-threshold": 90,
 		"interval": 1,
-		"format": "<span color='#eee'>temp:</span>{temperatureC:02d}"
+		"format": "<span color='#fff'>temp:</span>{temperatureC:02d}"
 	},
 
 	"disk": {
 		"interval": 30,
 		"path": "/",
-		"format": "<span color='#eee'>disk:</span>{percentage_used:02d}",
+		"format": "<span color='#fff'>disk:</span>{percentage_used:02d}",
 		"unit": "GB",
 		"states": {
 			"warning": 70,
@@ -58,41 +59,45 @@
 
 	"memory": {
 		"interval": 1,
-		"format": "<span color='#eee'>mem:</span>{percentage:02d}",
+		"format": "<span color='#fff'>mem:</span>{percentage:02d}",
 		"states": {
 			"warning": 70,
 			"critical": 85
 		}
 	},
 
+	"mpris": {
+		"format": "{title}"
+	},
+
 	"network": {
 		"interface": "wlan0",
-		"format": "<span color='#eee'>wlan:</span>{signalStrength:02d}",
-		"format-disconnected": "<span color='#eee'>wlan:</span>0",
+		"format": "<span color='#fff'>wlan:</span>{signalStrength:02d}",
+		"format-disconnected": "<span color='#fff'>wlan:</span>0",
 		"interval": 5
 	},
 
 	"pulseaudio": {
-		"format": "<span color='#eee'>vol:</span>{volume:02d}",
-		"format-muted": "<span color='#eee'>vol:</span>{volume:02d}",
+		"format": "<span color='#fff'>vol:</span>{volume:02d}",
+		"format-muted": "<span color='#fff'>vol:</span>{volume:02d}",
 		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
 		"interval": 1
 	},
 
 	"backlight": {
 		"device": "backlight",
-		"format": "<span color='#eee'>bl:</span>{percent:02d}",
+		"format": "<span color='#fff'>bl:</span>{percent:02d}",
 		"interval": 1
 	},
 
 	"clock#date": {
 		"interval": 1,
-		"format": "<span color='#eee'>date:</span>{:%m-%d-%y}"
+		"format": "<span color='#fff'>date:</span>{:%m-%d-%y}"
 	},
 
 	"clock#time": {
 		"interval": 1,
-		"format": "<span color='#eee'>time:</span>{:%H:%M:%S}"
+		"format": "<span color='#fff'>time:</span>{:%H:%M:%S}"
 	}
 }
 

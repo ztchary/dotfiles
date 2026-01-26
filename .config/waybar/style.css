@@ -1,6 +1,6 @@
 * {
 	font-family: "Hack", monospace;
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: bold;
 }
 
@@ -8,25 +8,24 @@ window#waybar {
 	background: transparent;
 }
 
-#battery, #cpu, #temperature, #disk, #memory,
-#network, #clock, #pulseaudio, #backlight {
-	margin: 5px;
-}
-
-#battery.critical, #cpu.critical, #temperature.critical, #disk.critical, #memory.critical {
-	color: #f88;
-}
-
-#battery.warning, #cpu.warning, #disk.warning, #memory.warning {
-	color: #ff8;
+.module {
+	padding: 3px 7px;
 }
 
 #battery, #cpu, #temperature, #disk, #memory {
 	color: #8f8;
 }
 
-#clock {
-	color: #8ff;
+#battery.warning, #cpu.warning, #disk.warning, #memory.warning {
+	color: #ff8;
+}
+
+#battery.critical, #cpu.critical, #temperature.critical, #disk.critical, #memory.critical {
+	color: #f88;
+}
+
+#mpris {
+	color: #ff8;
 }
 
 #network, #pulseaudio, #backlight {
@@ -35,5 +34,9 @@ window#waybar {
 
 #network.disconnected, #pulseaudio.muted {
 	color: #888;
+}
+
+#clock {
+	color: #8ff;
 }
 
