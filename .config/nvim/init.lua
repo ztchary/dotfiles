@@ -14,7 +14,7 @@ vim.api.nvim_create_user_command("UpdatePlugins", function ()
 	for i = 1, #plugins do
 		local url = "https://github.com/" .. plugins[i] .. ".git"
 		local dst = PLUGIN_PATH .. string.gsub(plugins[i], "/", "-")
-		table.insert(cmds, vim.system({"git", "clone", url, dst}))
+		table.insert(cmds, vim.system({"git", "clone", "--depth=1", url, dst}))
 	end
 	for i = 1, #cmds do
 		cmds[i]:wait()
