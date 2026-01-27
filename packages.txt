@@ -1,0 +1,15 @@
+alacritty
+bash-completion
+brightnessctl
+btop
+discord
+firefox
+hyprland
+hyprlauncher
+hyprpaper
+hyprshot
+neovim
+spotify-launcher
+ttf-hack
+waybar
+
