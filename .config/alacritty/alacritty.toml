@@ -6,19 +6,6 @@ size = 12.0
 
 [font.normal]
 family = "Hack"
-style = "Regular"
-
-[font.bold]
-family = "Hack"
-style = "Bold"
-
-[font.italic]
-family = "Hack"
-style = "Italic"
-
-[font.bold_italic]
-family = "Hack"
-style = "Bold Italic"
 
 [colors.primary]
 background = '#000000'
