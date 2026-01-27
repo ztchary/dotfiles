@@ -9,7 +9,9 @@ hyprlauncher
 hyprpaper
 hyprshot
 neovim
+ripgrep
 spotify-launcher
+tree-sitter-cli
 ttf-hack
 waybar
 
