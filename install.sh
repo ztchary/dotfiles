@@ -3,6 +3,8 @@
 root=$(realpath $(dirname $0))
 cd $root
 
+rm ~/.bashrc ~/.bash_profile
+
 sudo pacman -Sy --needed - < packages.txt
 
 mkdir -p ~/.config/nvim
