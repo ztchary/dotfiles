@@ -11,7 +11,7 @@ PS1errcode() {
 	fi
 }
 
-PS1='\e[96m\h\e[95m$PWD$(PS1errcode)\e[m\n$ '
+PS1='\e[94m\h\e[95m$PWD$(PS1errcode)\e[m\n$ '
 
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 export EDITOR='nvim'
@@ -30,3 +30,5 @@ alias egrep='egrep --color=auto'
 alias zgrep='zgrep --color=auto'
 alias la='ls -lAh'
 
+
+export PATH=$PATH:/home/zac/.spicetify

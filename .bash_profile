@@ -4,3 +4,5 @@ if tty | grep -q tty1; then
 	exit
 fi
 
+
+export PATH=$PATH:/home/zac/.spicetify

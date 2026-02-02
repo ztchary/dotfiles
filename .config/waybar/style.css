@@ -5,38 +5,42 @@
 }
 
 window#waybar {
-	background: transparent;
+	background: #191724;
 }
 
 .module {
-	padding: 3px 7px;
+	padding: 7px;
 }
 
 #battery, #cpu, #temperature, #disk, #memory {
-	color: #8f8;
+	color: #9ccfd8;
 }
 
 #battery.warning, #cpu.warning, #disk.warning, #memory.warning {
-	color: #ff8;
+	color: #f6c177;
 }
 
 #battery.critical, #cpu.critical, #temperature.critical, #disk.critical, #memory.critical {
-	color: #f88;
+	color: #eb6f92;
 }
 
 #mpris {
-	color: #ff8;
+	color: #31748f;
+}
+
+#window {
+	color: #e0def4;
 }
 
 #network, #pulseaudio, #backlight {
-	color: #f8f;
+	color: #c4a7e7;
 }
 
 #network.disconnected, #pulseaudio.muted {
-	color: #888;
+	color: #6e6a86;
 }
 
 #clock {
-	color: #8ff;
+	color: #ebbcba;
 }
 
