@@ -49,7 +49,7 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- nvim-treesitter/nvim-treesitter
-local parsers = { "c", "lua", "python" }
+local parsers = { "c", "asm", "lua", "python" }
 require("nvim-treesitter").install(parsers)
 vim.api.nvim_create_autocmd('FileType', {
   pattern = parsers,
