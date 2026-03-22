@@ -1,0 +1,13 @@
+show=drun
+mode=drun
+width=500
+height=300
+prompt=
+filter_rate=100
+allow_markup=true
+no_actions=true
+insensitive=true
+allow_images=true
+image_size=32
+hide_on_blur=true
+display_generic=true

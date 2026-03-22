@@ -1,0 +1,39 @@
+#window {
+    font-family: "Overpass Mono", sans-serif;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+}
+
+#outer-box {
+    padding: 20px;
+}
+
+#input {
+    margin-bottom: 15px;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 18px;
+}
+
+
+#entry {
+    padding: 10px 12px;
+    margin: 2px 0;
+}
+
+#entry:selected {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+#img {
+    margin-right: 10px;
+}
+
+#text {
+    font-size: 18px; 
+    color: white;
+}

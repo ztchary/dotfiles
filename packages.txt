@@ -8,7 +8,6 @@ gcc
 git
 gnu-free-fonts
 hyprland
-hyprlauncher
 hyprpaper
 hyprshot
 less
@@ -21,4 +20,5 @@ spotify-launcher
 tree-sitter-cli
 ttf-hack
 waybar
+wofi
 

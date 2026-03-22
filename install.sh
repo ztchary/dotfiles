@@ -9,6 +9,7 @@ sudo pacman -Sy --needed - < packages.txt
 
 mkdir -p ~/.config/nvim
 ln -s $root/.config/hypr          ~/.config
+ln -s $root/.config/wofi          ~/.config
 ln -s $root/.config/alacritty     ~/.config
 ln -s $root/.config/waybar        ~/.config
 ln -s $root/.config/nvim/init.lua ~/.config/nvim

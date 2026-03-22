@@ -29,6 +29,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias zgrep='zgrep --color=auto'
 alias la='ls -lAh'
+alias z='ssh zac@10.0.1.248'
 
 
 export PATH=$PATH:/home/zac/.spicetify
