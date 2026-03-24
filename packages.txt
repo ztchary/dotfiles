@@ -16,8 +16,8 @@ make
 man-db
 neovim
 noto-fonts
-noto-fonts-emoji
 noto-fonts-cjk
+noto-fonts-emoji
 noto-fonts-extra
 openssh
 pipewire-pulse
@@ -30,4 +30,3 @@ ttf-hack
 vim
 waybar
 wofi
-

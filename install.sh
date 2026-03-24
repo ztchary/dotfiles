@@ -23,5 +23,6 @@ nvim -c :UpdatePlugins -c :q
 
 systemctl --user --now enable pipewire pipewire-pulse wireplumber
 
+clear
 fastfetch
 
