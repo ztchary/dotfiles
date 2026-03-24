@@ -21,3 +21,7 @@ sudo sed -i s/USER/$USER/ /etc/systemd/system/getty@tty1.service
 
 nvim -c :UpdatePlugins -c :q
 
+systemctl --user --now enable pipewire pipewire-pulse wireplumber
+
+fastfetch
+
