@@ -1,0 +1,9 @@
+config/alacritty .config/alacritty
+config/gtk .config/gtk-3.0
+config/gtk .config/gtk-4.0
+config/hypr .config/hypr
+config/nvim/init.lua .config/nvim/init.lua
+config/waybar .config/waybar
+config/wofi .config/wofi
+bashrc .bashrc
+bash_profile .bash_profile

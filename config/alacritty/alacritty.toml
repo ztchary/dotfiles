@@ -1,0 +1,28 @@
+[window]
+
+[font]
+size = 12
+normal.family = "Hack"
+
+[colors.primary]
+background = "#111111"
+
+[colors.normal]
+black   = "#404040"
+white   = "#c0c0c0"
+red     = "#ff4040"
+green   = "#40ff40"
+blue    = "#2060ff"
+cyan    = "#40ffff"
+magenta = "#ff40ff"
+yellow  = "#ffff40"
+
+[colors.bright]
+black   = "#808080"
+white   = "#ffffff"
+red     = "#ff8080"
+green   = "#80ff80"
+blue    = "#40c0ff"
+cyan    = "#80ffff"
+magenta = "#ff80ff"
+yellow  = "#ffff80"

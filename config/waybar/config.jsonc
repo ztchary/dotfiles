@@ -1,0 +1,89 @@
+{
+	"modules-left": [
+		"battery",
+		"cpu",
+		"temperature",
+		"disk",
+		"memory"
+	],
+	"modules-center": [
+		"hyprland/window"
+	],
+	"modules-right": [
+		"network",
+		"pulseaudio",
+		"backlight",
+		"clock#date",
+		"clock#time"
+	],
+
+	"battery": {
+		"interval": 1,
+		"format": "<span color='#eee'>bat:</span>{capacity:02d}",
+		"states": {
+			"warning": 30,
+			"critical": 15
+		}
+	},
+	"cpu": {
+		"interval": 1,
+		"format": "<span color='#eee'>cpu:</span>{usage:02d}",
+		"states": {
+			"warning": 70,
+			"critical": 85
+		}
+	},
+	"temperature": {
+		"interval": 1,
+		"format": "<span color='#eee'>temp:</span>{temperatureC:02d}",
+		"states": {
+			"warning": 70,
+			"critical": 85
+		}
+	},
+	"disk": {
+		"interval": 1,
+		"format": "<span color='#eee'>disk:</span>{percentage_used:02d}",
+		"states": {
+			"warning": 70,
+			"critical": 85
+		}
+	},
+	"memory": {
+		"interval": 1,
+		"format": "<span color='#eee'>memory:</span>{percentage:02d}",
+		"states": {
+			"warning": 70,
+			"critical": 85
+		}
+	},
+
+	"hyprland/window": {
+		"format": "<span color='#eee'>{title}</span>"
+	},
+
+	"network": {
+		"interval": 5,
+		"interface": "wlan0",
+		"format": "<span color='#eee'>wlan:</span>{signalStrength:02d}",
+		"format-disconnected": "<span color='#eee'>wlan:</span>00"
+	},
+	"pulseaudio": {
+		"interval": 1,
+		"format": "<span color='#eee'>vol:</span>{volume:02d}",
+		"format-muted": "<span color='#eee'>vol:</span>{volume:02d}"
+	},
+	"backlight": {
+		"interval": 1,
+		"device": "backlight",
+		"format": "<span color='#e0def4'>bl:</span>{percent:02d}"
+	},
+	"clock#date": {
+		"interval": 1,
+		"format": "<span color='#eee'>date:</span>{:%d-%m-%y}"
+	},
+	"clock#time": {
+		"interval": 1,
+		"format": "<span color='#eee'>time:</span>{:%I:%M:%S}"
+	}
+}

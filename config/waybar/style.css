@@ -1,0 +1,38 @@
+* {
+	font-family: "Hack";
+	font-size: 12px;
+	font-weight: bold;
+}
+
+window#waybar {
+	background: #000;
+}
+
+.module {
+	padding: 5px;
+}
+
+#clock {
+	color: #ff80ff;
+}
+
+#battery, #cpu, #temperature, #disk, #memory {
+	color: #80ffff;
+}
+
+#battery.warning, #cpu.warning, #temperature.warning, #disk.warning, #memory.warning {
+	color: #ffff80;
+}
+
+#battery.critical, #cpu.critical, #temperature.critical, #disk.critical, #memory.critical {
+	color: #ff8080;
+}
+
+#network, #pulseaudio, #backlight {
+	color: #80ff80;
+}
+
+#network.disconnected, #pulseaudio.muted {
+	color: #808080;
+}
+
