@@ -2,7 +2,7 @@ set -o vi
 shopt -s cdspell autocd histappend
 . /usr/share/bash-completion/bash_completion
 
-PS1='\e[96m\h\e[95m$PWD\e[93m $?\e[m\n$ '
+PS1='\e[96m\h\e[95m$PWD\e[92m $?\e[m\n$ '
 
 export EDITOR='nvim'
 
