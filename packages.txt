@@ -4,6 +4,7 @@ bash-completion
 brightnessctl
 btop
 discord
+fastfetch
 firefox
 gcc
 git
