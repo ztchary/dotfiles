@@ -16,6 +16,8 @@ ExecStart=
 ExecStart=-/usr/bin/agetty -o '-p -f -- \u' --noclear --autologin $USER %I $TERM
 EOF
 
+sudo sed '/HandleLidSwitch/ { s/#//; s/=.*$/=ignore/; }' -i /etc/systemd/logind.conf
+
 nvim -c :UpdatePlugins -c :q
 
 systemctl --user --now enable pipewire pipewire-pulse wireplumber
