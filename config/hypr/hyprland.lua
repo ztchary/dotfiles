@@ -1,20 +1,19 @@
+hl.env("XCURSOR_SIZE", "24")
+hl.env("HYPRCURSOR_SIZE", "24")
+hl.env("GTK_THEME", "Adwaita-dark")
+hl.env("QT_STYLE_OVERRIDE", "Adwaita-Dark")
+
+hl.on("hyprland.start", function ()
+	hl.exec_cmd("waybar")
+	hl.exec_cmd("alacritty -e bash -c 'systemd-analyze; bash'")
+end)
+
 hl.monitor({
 	output = "",
 	mode = "preferred",
 	position = "auto",
 	scale = "1"
 })
-
-hl.env("XCURSOR_SIZE", "24")
-hl.env("HYPRCURSOR_SIZE", "24")
-hl.env("GTK_THEME", "Adwaita-dark")
-hl.env("QT_STYLE_OVERRIDE", "Adwaita-Dark")
-
-
-hl.on("hyprland.start", function ()
-	hl.exec_cmd("waybar")
-	hl.exec_cmd("alacritty -e bash -c 'systemd-analyze; bash'")
-end)
 
 hl.config({
 	general = {
@@ -48,7 +47,6 @@ hl.config({
 	}
 })
 
-
 hl.bind("SUPER + CTRL + ALT + ESCAPE", hl.dsp.exec_cmd("shutdown now"))
 hl.bind("SUPER + CTRL + ALT + SHIFT + ESCAPE", hl.dsp.exec_cmd("shutdown -r now"))
 hl.bind("SUPER + ESCAPE", hl.dsp.exit())
@@ -65,27 +63,10 @@ hl.bind("SUPER + l", hl.dsp.focus({ direction = "right" }))
 hl.bind("SUPER + k", hl.dsp.focus({ direction = "up" }))
 hl.bind("SUPER + j", hl.dsp.focus({ direction = "down" }))
 
-hl.bind("SUPER + 1", hl.dsp.focus({ workspace = "1" }))
-hl.bind("SUPER + 2", hl.dsp.focus({ workspace = "2" }))
-hl.bind("SUPER + 3", hl.dsp.focus({ workspace = "3" }))
-hl.bind("SUPER + 4", hl.dsp.focus({ workspace = "4" }))
-hl.bind("SUPER + 5", hl.dsp.focus({ workspace = "5" }))
-hl.bind("SUPER + 6", hl.dsp.focus({ workspace = "6" }))
-hl.bind("SUPER + 7", hl.dsp.focus({ workspace = "7" }))
-hl.bind("SUPER + 8", hl.dsp.focus({ workspace = "8" }))
-hl.bind("SUPER + 9", hl.dsp.focus({ workspace = "9" }))
-hl.bind("SUPER + 0", hl.dsp.focus({ workspace = "10" }))
-
-hl.bind("SUPER + SHIFT + 1", hl.dsp.window.move({ workspace = "1" }))
-hl.bind("SUPER + SHIFT + 2", hl.dsp.window.move({ workspace = "2" }))
-hl.bind("SUPER + SHIFT + 3", hl.dsp.window.move({ workspace = "3" }))
-hl.bind("SUPER + SHIFT + 4", hl.dsp.window.move({ workspace = "4" }))
-hl.bind("SUPER + SHIFT + 5", hl.dsp.window.move({ workspace = "5" }))
-hl.bind("SUPER + SHIFT + 6", hl.dsp.window.move({ workspace = "6" }))
-hl.bind("SUPER + SHIFT + 7", hl.dsp.window.move({ workspace = "7" }))
-hl.bind("SUPER + SHIFT + 8", hl.dsp.window.move({ workspace = "8" }))
-hl.bind("SUPER + SHIFT + 9", hl.dsp.window.move({ workspace = "9" }))
-hl.bind("SUPER + SHIFT + 0", hl.dsp.window.move({ workspace = "10" }))
+for i = 1, 10 do
+	hl.bind("SUPER + "..(i%10), hl.dsp.focus({ workspace = i }))
+	hl.bind("SUPER + SHIFT + "..(i%10), hl.dsp.window.move({ workspace = i }))
+end
 
 hl.bind("SUPER + mouse:272", hl.dsp.window.drag(),   { mouse = true })
 hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
