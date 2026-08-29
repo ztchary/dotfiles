@@ -4,7 +4,10 @@ root=$(realpath $(dirname $0))
 
 sudo pacman -Sy --needed --noconfirm - < $root/packages.txt
 
-mkdir -p ~/.config/nvim
+mkdir -pv ~/.config/nvim
+mkdir -pv ~/{down,pics/screenshots,vids,dev,music}
+
+wget -P ~/pics https://ztchary.net/bg.png
 
 ln -sfTv $root/config/alacritty      ~/.config/alacritty
 ln -sfTv $root/config/gtk            ~/.config/gtk-3.0

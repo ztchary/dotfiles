@@ -10,6 +10,7 @@ gcc
 git
 gnu-free-fonts
 hyprland
+hyprpaper
 hyprshot
 less
 make
@@ -29,4 +30,5 @@ tree-sitter-cli
 ttf-hack
 vim
 waybar
+wget
 wofi

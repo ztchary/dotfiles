@@ -6,7 +6,7 @@ hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("GTK_THEME", "Adwaita-dark")
 hl.env("QT_STYLE_OVERRIDE", "Adwaita-Dark")
-hl.env("HYPRSHOT_DIR", "~/pics/screenshots")
+hl.env("HYPRSHOT_DIR", "pics/screenshots")
 
 hl.on("hyprland.start", function ()
 	for i = 1, #conf.start do
@@ -73,6 +73,7 @@ hl.bind("SUPER + SHIFT + h", hl.dsp.window.move({ direction = "left"  }))
 hl.bind("SUPER + SHIFT + l", hl.dsp.window.move({ direction = "right" }))
 hl.bind("SUPER + SHIFT + k", hl.dsp.window.move({ direction = "up"    }))
 hl.bind("SUPER + SHIFT + j", hl.dsp.window.move({ direction = "down"  }))
+hl.bind("SUPER + TAB", hl.dsp.focus({ workspace = "previous" }))
 
 for i = 1, 10 do
 	hl.bind("SUPER + "..(i%10), hl.dsp.focus({ workspace = i }))
