@@ -6,7 +6,16 @@ sudo pacman -Sy --needed --noconfirm - < $root/packages.txt
 
 mkdir -p ~/.config/nvim
 
-for dir in ls $root/config
+ln -sfTv $root/config/alacritty      ~/.config/alacritty
+ln -sfTv $root/config/gtk            ~/.config/gtk-3.0
+ln -sfTv $root/config/gtk            ~/.config/gtk-4.0
+ln -sfTv $root/config/hypr           ~/.config/hypr
+ln -sfTv $root/config/nvim/init.lua  ~/.config/nvim/init.lua
+ln -sfTv $root/config/waybar         ~/.config/waybar
+ln -sfTv $root/config/wofi           ~/.config/wofi
+ln -sfTv $root/config/user-dirs.dirs ~/.config/user-dirs.dirs
+ln -sfTv $root/config/bashrc         ~/.bashrc
+ln -sfTv $root/config/bash_profile   ~/.bash_profile
 
 cat << EOF | sudo systemctl edit --stdin getty@tty1.service
 [Service]
