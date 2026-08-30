@@ -25,6 +25,6 @@ hl.window_rule({
 
 return {
 	hidecursor = false,
-	start = { "hyprpaper", "discord", "spotify-launcher", "steam" }
+	start = { "hyprpaper", "discord", "spotify-launcher", "steam", "immy ~/pics/elgato.png" }
 }
 

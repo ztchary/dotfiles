@@ -33,8 +33,7 @@ hl.config({
 			enabled = false
 		},
 		blur = {
-			size = 3,
-			passes = 3
+			enabled = false
 		}
 	},
 
@@ -51,6 +50,13 @@ hl.config({
 	cursor = {
 		hide_on_key_press = conf.hidecursor
 	}
+})
+
+hl.window_rule({
+	match = {
+		class = "immy"
+	},
+	float = true
 })
 
 hl.bind("SUPER + CTRL + ALT + ESCAPE", hl.dsp.exec_cmd("shutdown now"))
