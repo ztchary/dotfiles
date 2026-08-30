@@ -77,7 +77,7 @@ mount -v --rbind /run /mnt/run --mkdir
 zp "misc nonsense"
 echo "en_US.UTF-8 UTF-8" > /mnt/etc/locale.gen
 chroot /mnt /usr/bin/locale-gen
-ln -svf "/mnt/usr/share/zoneinfo/$timezone" /mnt/etc/localtime
+ln -svf "/usr/share/zoneinfo/$timezone" /mnt/etc/localtime
 echo "$hostname" > /mnt/etc/hostname
 echo "nameserver 1.1.1.1" > /mnt/resolv.conf
 
