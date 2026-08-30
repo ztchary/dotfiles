@@ -29,17 +29,11 @@ hl.config({
 	},
 
 	decoration = {
-		shadow = {
-			enabled = false
-		},
-		blur = {
-			enabled = false
-		}
+		shadow = { enabled = false },
+		blur = { enabled = false }
 	},
 
-	animations = {
-		enabled = false
-	},
+	animations = { enabled = false },
 
 	misc = {
 		disable_splash_rendering = true,
@@ -47,15 +41,11 @@ hl.config({
 		background_color = 0
 	},
 
-	cursor = {
-		hide_on_key_press = conf.hidecursor
-	}
+	cursor = { hide_on_key_press = conf.hidecursor }
 })
 
 hl.window_rule({
-	match = {
-		class = "immy"
-	},
+	match = { class = "immy" },
 	float = true
 })
 
@@ -75,11 +65,12 @@ hl.bind("SUPER + h", hl.dsp.focus({ direction = "left"  }))
 hl.bind("SUPER + l", hl.dsp.focus({ direction = "right" }))
 hl.bind("SUPER + k", hl.dsp.focus({ direction = "up"    }))
 hl.bind("SUPER + j", hl.dsp.focus({ direction = "down"  }))
+hl.bind("SUPER + TAB", hl.dsp.focus({ workspace = "previous" }))
 hl.bind("SUPER + SHIFT + h", hl.dsp.window.move({ direction = "left"  }))
 hl.bind("SUPER + SHIFT + l", hl.dsp.window.move({ direction = "right" }))
 hl.bind("SUPER + SHIFT + k", hl.dsp.window.move({ direction = "up"    }))
 hl.bind("SUPER + SHIFT + j", hl.dsp.window.move({ direction = "down"  }))
-hl.bind("SUPER + TAB", hl.dsp.focus({ workspace = "previous" }))
+hl.bind("SUPER + SHIFT + TAB", hl.dsp.window.move({ workspace = "previous" }))
 
 for i = 1, 10 do
 	hl.bind("SUPER + "..(i%10), hl.dsp.focus({ workspace = i }))

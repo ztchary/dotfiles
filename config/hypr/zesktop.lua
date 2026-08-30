@@ -3,23 +3,17 @@ hl.bind("SUPER + SHIFT + ALT + S", hl.dsp.exec_cmd("hyprshot -m region -f .immy;
 hl.bind("Pause", hl.dsp.exec_cmd("playerctl play-pause"))
 
 hl.window_rule({
-	match = {
-		class = "discord"
-	},
+	match = { class = "discord" },
 	workspace = "6 silent"
 })
 
 hl.window_rule({
-	match = {
-		class = "Spotify"
-	},
+	match = { class = "Spotify" },
 	workspace = "7 silent"
 })
 
 hl.window_rule({
-	match = {
-		class = "steam"
-	},
+	match = { class = "steam" },
 	workspace = "8 silent"
 })
 

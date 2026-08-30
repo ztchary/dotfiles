@@ -1,7 +1,12 @@
-ill add a good readme later, and maybe make my config files less ugly
+## zarch
 
-## setup instructions
+1. boot an arch installer
+2. `curl https://arch.ztchary.net | bash`
+3. follow prompts
 
-1. run install.sh
-2. restart
+## dotfiles
+
+1. clone repo (to a permanent location)
+2. run install.sh
+3. restart
 
