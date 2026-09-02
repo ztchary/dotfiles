@@ -61,10 +61,7 @@ echo "$username:$passwd6" | chpasswd -e -R /mnt
 if [[ "yY" == *"$useiwd"* ]]; then
 	zp "iwd"
 	mkdir -p /mnt/etc/iwd /mnt/var/lib/iwd
-	cat << EOF | tee /mnt/etc/iwd/main.conf
-[General]
-EnableNetworkConfiguration=true
-EOF
+	echo "[General]\nEnableNetworkConfiguration=true" > /mnt/etc/iwd/main.conf
 	cp -r /var/lib/iwd/* /mnt/var/lib/iwd
 fi
 
@@ -80,6 +77,7 @@ chroot /mnt /usr/bin/locale-gen
 ln -svf "/usr/share/zoneinfo/$timezone" /mnt/etc/localtime
 echo "$hostname" > /mnt/etc/hostname
 echo "nameserver 1.1.1.1" > /mnt/resolv.conf
+echo -e "KEYMAP=us\nFONT=default8x16" > /mnt/etc/vconsole.conf
 
 zp "uki"
 cat << EOF | tee /mnt/etc/mkinitcpio.d/linux.preset

@@ -1,6 +1,8 @@
 alacritty
 base-devel
 bash-completion
+bluez
+bluez-utils
 brightnessctl
 btop
 discord

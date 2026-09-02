@@ -3,6 +3,3 @@ if tty | grep -q tty1; then
 	start-hyprland
 	exit
 fi
-
-
-export PATH=$PATH:/home/zac/.spicetify

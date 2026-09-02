@@ -5,6 +5,7 @@ shopt -s cdspell autocd histappend
 PS1='\e[96m\h\e[95m$PWD\e[92m $?\e[m\n$ '
 
 export EDITOR='nvim'
+export PATH=$PATH:./
 
 alias vim='nvim'
 alias ls='ls --color=auto'

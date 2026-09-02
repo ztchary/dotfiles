@@ -7,7 +7,7 @@ sudo pacman -Sy --needed --noconfirm - < $root/packages.txt
 mkdir -pv ~/.config/nvim
 mkdir -pv ~/{down,pics/screenshots,vids,dev,music}
 
-wget -P ~/pics https://ztchary.net/bg.png
+[ -e ~/pics/bg.png ] || wget -P ~/pics https://ztchary.net/bg.png
 
 ln -sfTv $root/config/alacritty      ~/.config/alacritty
 ln -sfTv $root/config/gtk            ~/.config/gtk-3.0
@@ -31,6 +31,7 @@ sudo sed '/HandleLidSwitch/ { s/#//; s/=.*$/=ignore/; }' -i /etc/systemd/logind.
 nvim -c :UpdatePlugins -c :q
 
 systemctl --user --now enable pipewire pipewire-pulse wireplumber
+sudo systemctl enable --now bluetooth
 
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'
