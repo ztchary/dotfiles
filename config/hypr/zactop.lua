@@ -10,6 +10,13 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"))
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"))
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"))
 
+hl.monitor({
+	output = "",
+	mode = "preferred",
+	position = "0x0",
+	scale = "1"
+})
+
 return {
 	hidecursor = true,
 	start = { "waybar", "alacritty" }

@@ -14,18 +14,12 @@ hl.on("hyprland.start", function ()
 	end
 end)
 
-hl.monitor({
-	output = "",
-	mode = "preferred",
-	position = "0x0",
-	scale = "1"
-})
-
 hl.config({
 	general = {
 		border_size = 0,
 		gaps_in = 0,
-		gaps_out = 0
+		gaps_out = 0,
+		allow_tearing = true
 	},
 
 	decoration = {
@@ -38,10 +32,13 @@ hl.config({
 	misc = {
 		disable_splash_rendering = true,
 		disable_hyprland_logo = true,
-		background_color = 0
+		background_color = 0,
+		vrr = 2
 	},
 
-	cursor = { hide_on_key_press = conf.hidecursor }
+	cursor = { hide_on_key_press = conf.hidecursor },
+
+	binds = { scroll_event_delay = 0 }
 })
 
 hl.window_rule({
