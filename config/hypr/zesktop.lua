@@ -6,6 +6,7 @@ hl.bind("SUPER + mouse_down", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_S
 hl.bind("SUPER + EQUAL", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"))
 hl.bind("SUPER + MINUS", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"))
 hl.bind("SUPER + BACKSPACE", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"))
+hl.bind("CTRL + SHIFT + Pause", hl.dsp.exec_cmd("obsctl record toggle"))
 hl.bind("SHIFT + Pause", hl.dsp.exec_cmd("playerctl -p spotify play-pause"))
 hl.bind("Pause", hl.dsp.exec_cmd("playerctl -p firefox play-pause"))
 
@@ -38,6 +39,6 @@ hl.monitor({
 
 return {
 	hidecursor = false,
-	start = { "hyprpaper", "discord", "spotify-launcher", "steam", "immy ~/pics/elgato.png" }
+	start = { "hyprpaper", "discord", "spotify-launcher", "steam" }
 }
 

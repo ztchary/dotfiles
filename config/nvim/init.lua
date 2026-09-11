@@ -1,7 +1,5 @@
 local plugins = {
 	"nvim-treesitter/nvim-treesitter",
-	"nvim-telescope/telescope.nvim",
-	"nvim-lua/plenary.nvim",
 	"rose-pine/neovim",
 	"mbbill/undotree",
 }
@@ -23,6 +21,7 @@ vim.api.nvim_create_user_command("UpdatePlugins", function ()
 	print("Done")
 end, {})
 
+vim.opt.expandtab = false
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
@@ -44,7 +43,6 @@ vim.opt.mouse = ""
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>//g<Left><Left>")
-vim.keymap.set("n", "<leader>=", "byiwwwviwpbbbviwpw")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
@@ -55,12 +53,6 @@ vim.api.nvim_create_autocmd('FileType', {
   pattern = parsers,
   callback = function() vim.treesitter.start() end,
 })
-
--- nvim-telescope/telescope.nvim
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>ff", builtin.find_files)
-vim.keymap.set("n", "<leader>fg", builtin.live_grep)
-
 -- rose-pine/neovim
 require("rose-pine").setup({ styles = { transparency = true } })
 vim.cmd.colorscheme("rose-pine")

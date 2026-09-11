@@ -8,6 +8,6 @@ allow_markup=true
 no_actions=true
 insensitive=true
 allow_images=true
-image_size=32
 hide_on_blur=true
 display_generic=true
+hide_scroll=true

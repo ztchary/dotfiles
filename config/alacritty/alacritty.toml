@@ -1,12 +1,14 @@
 [window]
 opacity = 0.5
+padding.x = 8
+padding.y = 8
 
 [font]
 size = 12
 normal.family = "Hack"
 
 [colors.primary]
-background = "#222222"
+background = "#000000"
 
 [colors.normal]
 black   = "#404040"

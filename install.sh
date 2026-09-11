@@ -5,9 +5,11 @@ root=$(realpath $(dirname $0))
 sudo pacman -Sy --needed --noconfirm - < $root/packages.txt
 
 mkdir -pv ~/.config/nvim
-mkdir -pv ~/{down,pics/screenshots,vids,dev,music}
+mkdir -pv ~/{down,pics/{screenshots,bg},vids,dev,music}
 
-[ -e ~/pics/bg.png ] || wget -P ~/pics https://ztchary.net/bg.png
+wget https://ztchary.net/bg.tar.gz
+tar -xzf bg.tar.gz -C ~/pics/bg
+rm bg.tar.gz
 
 ln -sfTv $root/config/alacritty      ~/.config/alacritty
 ln -sfTv $root/config/gtk            ~/.config/gtk-3.0
@@ -27,6 +29,7 @@ ExecStart=-/usr/bin/agetty -o '-p -f -- \u' --noclear --autologin $USER %I $TERM
 EOF
 
 sudo sed '/HandleLidSwitch/ { s/#//; s/=.*$/=ignore/; }' -i /etc/systemd/logind.conf
+sudo sed '/HandlePowerKey/ { s/#//; s/=.*$/=ignore/; }' -i /etc/systemd/logind.conf
 
 nvim -c :UpdatePlugins -c :q
 

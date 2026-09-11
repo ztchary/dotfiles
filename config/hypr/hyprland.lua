@@ -17,8 +17,8 @@ end)
 hl.config({
 	general = {
 		border_size = 0,
-		gaps_in = 0,
-		gaps_out = 0,
+		gaps_in = 10,
+		gaps_out = 20,
 		allow_tearing = true
 	},
 
@@ -56,6 +56,7 @@ hl.bind("SUPER + O", hl.dsp.window.float({ action = "toggle" }))
 hl.bind("SUPER + R", hl.dsp.exec_cmd("wofi --show=drun"))
 hl.bind("SUPER + B", hl.dsp.exec_cmd("firefox"))
 hl.bind("SUPER + S", hl.dsp.exec_cmd("iwctl station wlan0 scan"))
+hl.bind("SUPER + P", hl.dsp.exec_cmd("~/.config/hypr/picker.sh"))
 hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region"))
 
 hl.bind("SUPER + h", hl.dsp.focus({ direction = "left"  }))
