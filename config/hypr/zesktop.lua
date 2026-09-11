@@ -39,6 +39,6 @@ hl.monitor({
 
 return {
 	hidecursor = false,
-	start = { "hyprpaper", "discord", "spotify-launcher", "steam" }
+	start = { "discord", "spotify-launcher", "steam" }
 }
 

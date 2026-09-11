@@ -9,6 +9,7 @@ hl.env("QT_STYLE_OVERRIDE", "Adwaita-Dark")
 hl.env("HYPRSHOT_DIR", "pics/screenshots")
 
 hl.on("hyprland.start", function ()
+	hl.exec_cmd("hyprpaper")
 	for i = 1, #conf.start do
 		hl.exec_cmd(conf.start[i])
 	end
