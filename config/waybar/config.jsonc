@@ -1,4 +1,5 @@
 {
+	"layer": "top",
 	"modules-left": [
 		"battery",
 		"cpu",
