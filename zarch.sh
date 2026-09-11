@@ -23,7 +23,9 @@ read -rsp "password: " password < /dev/tty
 echo
 read -rp "timezone: " timezone < /dev/tty
 read -rp "hostname: " hostname < /dev/tty
-read -n 1 -rp "use iwd? [y/N] " useiwd < /dev/tty
+read -n 1 -rp "copy iso iwd? [y/N] " useiwd < /dev/tty
+echo
+read -n 1 -rp "install dotfiles? [y/N] " dotfiles < /dev/tty
 echo
 
 zp "writing partitions"
@@ -53,7 +55,7 @@ zp "efibootmgr"
 efibootmgr -c -d "${parts[0]}" -l "\\arch.efi" -L "zarch"
 
 zp "make user"
-sed -i '/%w.*) A/ s/# //' /mnt/etc/sudoers
+sed -i '/%w.*) A/s/# //' /mnt/etc/sudoers
 useradd -m -G wheel -s /bin/bash -R /mnt "$username"
 passwd6=$(openssl passwd -6 "$password")
 echo "$username:$passwd6" | chpasswd -e -R /mnt
@@ -65,19 +67,31 @@ if [[ "yY" == *"$useiwd"* ]]; then
 	cp -r /var/lib/iwd/* /mnt/var/lib/iwd
 fi
 
-zp "other mounts"
-mount -v -t proc proc /mnt/proc --mkdir
-mount -v --rbind /sys /mnt/sys --mkdir
-mount -v --rbind /dev /mnt/dev --mkdir
-mount -v --rbind /run /mnt/run --mkdir
-
 zp "misc nonsense"
+sed -i '/\[multilib\]/{N;s/#//g;}' /etc/pacman.conf
 echo "en_US.UTF-8 UTF-8" > /mnt/etc/locale.gen
 chroot /mnt /usr/bin/locale-gen
 ln -svf "/usr/share/zoneinfo/$timezone" /mnt/etc/localtime
 echo "$hostname" > /mnt/etc/hostname
 echo "nameserver 1.1.1.1" > /mnt/resolv.conf
 echo -e "KEYMAP=us\nFONT=default8x16" > /mnt/etc/vconsole.conf
+
+zp "other mounts"
+mount -v -t proc proc /mnt/proc --mkdir
+mount -v --rbind /sys /mnt/sys --mkdir
+mount -v --rbind /dev /mnt/dev --mkdir
+mount -v --rbind /run /mnt/run --mkdir
+
+if [[ "yY" == *"$dotfiles"* ]]; then
+	zp "dotfiles"
+	sed -i '/%w.*) N/s/# //' /mnt/etc/sudoers
+	chroot /mnt /bin/su -l $username -c '
+		mkdir -p ~/dev && cd ~/dev && \
+		git clone https://github.com/ztchary/dotfiles.git && \
+		~/dev/dotfiles/install.sh
+	'
+	sed -i '/%w.*) N/s/^/# /' /mnt/etc/sudoers
+fi
 
 zp "uki"
 cat << EOF | tee /mnt/etc/mkinitcpio.d/linux.preset
