@@ -39,6 +39,10 @@ hl.monitor({
 
 return {
 	hidecursor = false,
-	start = { "discord", "spotify-launcher", "steam" }
+	start = function()
+		hl.exec_cmd("discord")
+		hl.exec_cmd("spotify-launcher")
+		hl.exec_cmd("steam")
+	end
 }
 

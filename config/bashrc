@@ -6,6 +6,7 @@ PS1='\e[96m\h\e[95m$PWD\e[92m $?\e[m\n$ '
 
 export EDITOR='nvim'
 export PATH=$PATH:./
+export MAKEFLAGS="-j$(nproc)"
 
 alias vim='nvim'
 alias ls='ls --color=auto'
