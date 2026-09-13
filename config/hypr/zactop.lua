@@ -19,6 +19,9 @@ hl.monitor({
 
 return {
 	hidecursor = true,
-	start = { "waybar", "alacritty" }
+	start = function()
+		hl.exec_cmd("waybar")
+		hl.exec_cmd("alacritty")
+	end
 }
 
