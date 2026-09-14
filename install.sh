@@ -15,6 +15,7 @@ ln -sfTv $root/config/alacritty      ~/.config/alacritty
 ln -sfTv $root/config/gtk            ~/.config/gtk-3.0
 ln -sfTv $root/config/gtk            ~/.config/gtk-4.0
 ln -sfTv $root/config/hypr           ~/.config/hypr
+ln -sfTv $root/config/mako           ~/.config/mako
 ln -sfTv $root/config/nvim/init.lua  ~/.config/nvim/init.lua
 ln -sfTv $root/config/waybar         ~/.config/waybar
 ln -sfTv $root/config/wofi           ~/.config/wofi

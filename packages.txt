@@ -1,4 +1,4 @@
-alacritty
+lacritty
 base-devel
 bash-completion
 bluez
@@ -13,9 +13,11 @@ git
 gnu-free-fonts
 hyprland
 hyprpaper
+hyprpm
 hyprshot
 less
 make
+mako
 man-db
 neovim
 noto-fonts
@@ -27,7 +29,6 @@ pipewire-pulse
 playerctl
 ripgrep
 spotify-launcher
-swaync
 tree-sitter-cli
 ttf-hack
 vim

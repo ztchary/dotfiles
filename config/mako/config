@@ -1,0 +1,7 @@
+layer=overlay
+margin=20
+border-size=0
+font=Hack 12
+background-color=#0000007f
+default-timeout=3500
+
