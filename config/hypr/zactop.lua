@@ -10,7 +10,7 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"))
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"))
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"))
 
-local rot = 0
+rot = 0
 
 local function toggle_rotation()
 	rot = (rot + 1) % 4
@@ -24,7 +24,7 @@ end
 hl.bind("SUPER + SHIFT + R", toggle_rotation)
 
 hl.monitor({
-	output = "",
+	output = "eDP-1",
 	mode = "preferred",
 	position = "0x0",
 	scale = "1"
@@ -65,6 +65,7 @@ function hyprgrass()
 end
 
 return {
+	monitor = "eDP-1",
 	hidecursor = true,
 	start = function()
 		hl.exec_cmd("waybar")

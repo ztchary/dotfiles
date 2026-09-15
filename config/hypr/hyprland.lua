@@ -73,6 +73,7 @@ hl.bind("SUPER + SHIFT + TAB", hl.dsp.window.move({ workspace = "previous" }))
 for i = 1, 10 do
 	hl.bind("SUPER + "..(i%10), hl.dsp.focus({ workspace = i }))
 	hl.bind("SUPER + SHIFT + "..(i%10), hl.dsp.window.move({ workspace = i }))
+	hl.workspace_rule({ workspace = i, monitor = conf.monitor })
 end
 
 hl.bind("SUPER + mouse:272", hl.dsp.window.drag(),   { mouse = true })
