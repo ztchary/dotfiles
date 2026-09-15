@@ -8,6 +8,7 @@ hl.bind("SUPER + MINUS", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 
 hl.bind("SUPER + BACKSPACE", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"))
 hl.bind("CTRL + SHIFT + Pause", hl.dsp.exec_cmd("obsctl record toggle"))
 hl.bind("SHIFT + Pause", hl.dsp.exec_cmd("playerctl -p spotify play-pause"))
+hl.bind("CTRL + Pause", hl.dsp.exec_cmd("bt-toggle"))
 hl.bind("Pause", hl.dsp.exec_cmd("playerctl -p firefox play-pause"))
 
 hl.window_rule({
@@ -31,13 +32,14 @@ hl.on("window.open", function(w)
 end)
 
 hl.monitor({
-	output = "",
+	output = "DP-1",
 	mode = "2560x1440@240",
 	position = "0x0",
 	scale = "1"
 })
 
 return {
+	monitor = "DP-1",
 	hidecursor = false,
 	start = function()
 		hl.exec_cmd("discord")
