@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
+set -e
+
 root=$(realpath $(dirname $0))
 
 sudo pacman -Sy --needed --noconfirm - < $root/packages.txt
 
-mkdir -pv ~/.config/nvim
+mkdir -pv ~/.config/{nvim,gtk-{3,4}.0}
 mkdir -pv ~/{down,pics/{screenshots,bg},vids,dev,music}
 
 wget https://ztchary.net/bg.tar.gz
@@ -12,8 +14,8 @@ tar -xzf bg.tar.gz -C ~/pics/bg
 rm bg.tar.gz
 
 ln -sfTv $root/config/alacritty      ~/.config/alacritty
-ln -sfTv $root/config/gtk            ~/.config/gtk-3.0
-ln -sfTv $root/config/gtk            ~/.config/gtk-4.0
+ln -sfTv $root/config/gtk.ini        ~/.config/gtk-3.0/settings.ini
+ln -sfTv $root/config/gtk.ini        ~/.config/gtk-4.0/settings.ini
 ln -sfTv $root/config/hypr           ~/.config/hypr
 ln -sfTv $root/config/mako           ~/.config/mako
 ln -sfTv $root/config/nvim/init.lua  ~/.config/nvim/init.lua
