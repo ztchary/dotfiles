@@ -34,7 +34,7 @@ window#waybar > box {
 	color: #ff8080;
 }
 
-#network, #pulseaudio, #backlight {
+#battery.charging, #battery.full, #network, #pulseaudio, #backlight {
 	color: #80ff80;
 }
 
