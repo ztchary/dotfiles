@@ -1,0 +1,37 @@
+{
+	"policies": {
+		"ExtensionSettings": {
+			"uBlock0@raymondhill.net": {
+				"installation_mode": "normal_installed"
+			},
+			"addon@darkreader.org": {
+				"installation_mode": "normal_installed"
+			},
+			"{805301ca-c7eb-45d1-8758-6dc98b9cb9b2}": {
+	"installation_mode": "normal_installed"
+			}
+		},
+		"Preferences": {
+			"sidebar.revamp": { "Value": true, "Status": "default" },
+			"sidebar.verticalTabs": { "Value": true, "Status": "default" },
+			"sidebar.position_start": { "Value": false, "Status": "default" },
+			"sidebar.main.tools": { "Value": "history,bookmarks,passwords", "Status": "default" },
+			"sidebar.visibility": { "Value": "hide-sidebar", "Status": "default" },
+			"sidebar.verticalTabs.dragToPinPromo.dismissed": { "Value": true, "Status": "default" },
+			"browser.toolbars.bookmarks.visibility": { "Value": "newtab", "Status": "default" },
+			"browser.newtabpage.activity-stream.feeds.section.topstories": { "Value": false, "Status": "default" },
+			"browser.newtabpage.activity-stream.feeds.topsites": { "Value": false, "Status": "default" },
+			"browser.newtabpage.activity-stream.widgets.weather.enabled": { "Value": false, "Status": "default" },
+			"browser.newtabpage.activity-stream.hideLogo": { "Value": true, "Status": "default" },
+			"browser.newtabpage.activity-stream.showSearch": { "Value": false, "Status": "default" },
+			"browser.newtabpage.activity-stream.showSponsored": { "Value": false, "Status": "default" },
+			"browser.newtabpage.activity-stream.showSponsoredCheckboxes": { "Value": false, "Status": "default" },
+			"browser.newtabpage.activity-stream.showSponsoredTopSites": { "Value": false, "Status": "default" },
+			"browser.uiCustomization.state": { 
+				"Value": "{\"placements\":{\"widget-overflow-fixed-list\":[],\"unified-extensions-area\":[],\"nav-bar\":[\"back-button\",\"forward-button\",\"stop-reload-button\",\"vertical-spacer\",\"urlbar-container\",\"downloads-button\",\"unified-extensions-button\",\"reset-pbm-toolbar-button\",\"smartwindow-group-tabs-button\",\"ai-window-toggle\"],\"toolbar-menubar\":[\"menubar-items\"],\"TabsToolbar\":[],\"vertical-tabs\":[\"tabbrowser-tabs\"],\"PersonalToolbar\":[\"personal-bookmarks\"]},\"seen\":[],\"dirtyAreaCache\":[\"nav-bar\",\"TabsToolbar\",\"vertical-tabs\",\"toolbar-menubar\",\"PersonalToolbar\"],\"currentVersion\":26,\"newElementCount\":0}", 
+				"Status": "default" 
+			}
+		}
+	}
+}
+

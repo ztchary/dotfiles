@@ -1,4 +1,4 @@
-hl.bind("SUPER + A", hl.dsp.exec_cmd("wpctl set-default $(wpctl list audio sinks | grep -vE 'hdmi|\\*' | cut -f1)"))
+hl.bind("SUPER + A", hl.dsp.exec_cmd("wpctl set-default $(wpctl list audio sinks | awk '{ids[i++]=$1; if($0 ~ /\\*/) c=i-1} END {print ids[(c+1)%i]}')"))
 hl.bind("SUPER + SHIFT + ALT + S", hl.dsp.exec_cmd("hyprshot -m region -f .immy; immy ~/.immy"))
 hl.bind("SUPER + M", hl.dsp.exec_cmd("~/dev/marker/marker.sh"))
 hl.bind("SUPER + mouse_up", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"))
