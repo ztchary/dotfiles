@@ -69,7 +69,6 @@ return {
 	hidecursor = true,
 	start = function()
 		hl.exec_cmd("waybar")
-		hl.exec_cmd("alacritty")
 		hl.exec_cmd("hyprpm reload && hyprctl dispatch hyprgrass")
 	end
 }
