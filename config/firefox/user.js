@@ -1,0 +1,12 @@
+user_pref("sidebar.revamp", true);
+user_pref("sidebar.verticalTabs", true);
+user_pref("sidebar.position_start", false);
+user_pref("sidebar.main.tools", "history,bookmarks,passwords");
+user_pref("sidebar.visibility", "hide-sidebar");
+user_pref("sidebar.verticalTabs.dragToPinPromo.dismissed", true);
+user_pref("browser.toolbars.bookmarks.visibility", "newtab");
+user_pref("browser.newtabpage.enabled", false);
+user_pref("browser.startup.homepage", "about:blank");
+user_pref("browser.uiCustomization.state", '{"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":[],"nav-bar":["back-button","forward-button","stop-reload-button","vertical-spacer","urlbar-container","downloads-button","unified-extensions-button","reset-pbm-toolbar-button","smartwindow-group-tabs-button","ai-window-toggle"],"toolbar-menubar":["menubar-items"],"TabsToolbar":[],"vertical-tabs":["tabbrowser-tabs"],"PersonalToolbar":["personal-bookmarks"]},"seen":[],"dirtyAreaCache":["nav-bar","TabsToolbar","vertical-tabs","toolbar-menubar","PersonalToolbar"],"currentVersion":26,"newElementCount":0}');
+user_pref("browser.tabs.allow_transparent_browser", true);
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);

@@ -1,0 +1,18 @@
+#main-window, #navigator-toolbox, #browser {
+	background: transparent !important;
+	background-color: rgba(0, 0, 0, 0) !important;
+}
+
+#main-window {
+	background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+:root {
+	--toolbar-bgcolor: transparent !important;
+	--toolbar-field-focus-background-color: transparent !important;
+	--tabpanel-background-color: transparent !important;
+	--lwt-accent-color: transparent !important;
+	--urlbar-background-color: transparent !important;
+	--urlbar-box-shadow: none !important;
+}
+

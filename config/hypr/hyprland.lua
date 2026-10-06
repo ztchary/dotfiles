@@ -49,7 +49,7 @@ hl.window_rule({
 hl.bind("SUPER + CTRL + ALT + ESCAPE", hl.dsp.exec_cmd("shutdown now"))
 hl.bind("SUPER + CTRL + ALT + SHIFT + ESCAPE", hl.dsp.exec_cmd("systemctl reboot --firmware-setup"))
 hl.bind("SUPER + ESCAPE", hl.dsp.exit())
-hl.bind("SUPER + T", hl.dsp.exec_cmd("alacritty"))
+hl.bind("SUPER + T", hl.dsp.exec_cmd("alacritty -e tmux"))
 hl.bind("SUPER + Q", hl.dsp.window.close())
 hl.bind("SUPER + SHIFT + Q", hl.dsp.window.kill())
 hl.bind("SUPER + F", hl.dsp.window.fullscreen({ action = "toggle" }))
@@ -75,7 +75,7 @@ hl.bind("SUPER + SHIFT + TAB", hl.dsp.window.move({ workspace = "previous" }))
 for i = 1, 10 do
 	hl.bind("SUPER + "..(i%10), hl.dsp.focus({ workspace = i }))
 	hl.bind("SUPER + SHIFT + "..(i%10), hl.dsp.window.move({ workspace = i }))
-	hl.workspace_rule({ workspace = i, monitor = conf.monitor })
+	hl.workspace_rule({ workspace = i, monitor = i <= 5 and conf.monitor or conf.monitor2 })
 end
 
 hl.bind("SUPER + mouse:272", hl.dsp.window.drag(),   { mouse = true })

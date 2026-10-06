@@ -38,8 +38,17 @@ hl.monitor({
 	scale = "1"
 })
 
+hl.monitor({
+	output = "HDMI-A-1",
+	mode = "preferred",
+	position = "-1280x0",
+	scale = "1",
+	transform = 1
+})
+
 return {
 	monitor = "DP-1",
+	monitor2 = "HDMI-A-1",
 	hidecursor = false,
 	start = function()
 		hl.exec_cmd("discord")

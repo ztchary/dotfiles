@@ -66,6 +66,7 @@ end
 
 return {
 	monitor = "eDP-1",
+	monitor2 = "eDP-1",
 	hidecursor = true,
 	start = function()
 		hl.exec_cmd("waybar")
