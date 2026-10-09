@@ -9,7 +9,7 @@ sudo pacman -Sy --needed --noconfirm - < $root/packages.txt
 mkdir -pv ~/.config/{nvim,gtk-{3,4}.0}
 mkdir -pv ~/{down,pics/{screenshots,bg},vids,dev,music}
 
-wget https://ztchary.net/bg.tar.gz
+wget https://zth.sh/bg.tar.gz
 tar -xzf bg.tar.gz -C ~/pics/bg
 rm bg.tar.gz
 
