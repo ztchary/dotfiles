@@ -14,8 +14,7 @@
 		"network",
 		"pulseaudio",
 		"backlight",
-		"clock#date",
-		"clock#time"
+		"clock"
 	],
 
 	"battery": {
@@ -79,12 +78,9 @@
 		"device": "backlight",
 		"format": "<span color='#e0def4'>bl:</span>{percent:02d}"
 	},
-	"clock#date": {
+	"clock": {
 		"interval": 1,
-		"format": "<span color='#eee'>date:</span>{:%d-%m-%y}"
-	},
-	"clock#time": {
-		"interval": 1,
-		"format": "<span color='#eee'>time:</span>{:%I:%M:%S}"
+		"format": "<span color='#eee'>time:</span>{:%d %I:%M}",
+		"tooltip-format": "{:%A, %B %d, %Y, %I:%M %p}"
 	}
 }
