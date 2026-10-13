@@ -29,11 +29,16 @@ hl.config({
 
 	animations = { enabled = false },
 
+	input = {
+		scroll_method = "on_button_down",
+		scroll_button = 274
+	},
+
 	misc = {
 		disable_splash_rendering = true,
 		disable_hyprland_logo = true,
 		background_color = 0,
-		vrr = 2
+		middle_click_paste = false
 	},
 
 	cursor = { hide_on_key_press = conf.hidecursor },
